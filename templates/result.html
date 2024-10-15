@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Failure Prediction Results</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+	<div class="container">
+    	<h2 class="text-center mt-4">Data Visualization and Model Training Results</h2>
+    	<div>{{ graph_html | safe }}</div>
+   	 
+    	<h3 class="mt-5">Model Performance</h3>
+    	<p><strong>Final Loss (MSE):</strong> {{ final_loss }}</p>
+
+    	<h3 class="mt-5">Loss Curve</h3>
+    	<img src="data:image/png;base64,{{ plot_url }}" alt="Loss Curve" class="img-fluid">
+	</div>
+</body>
+</html>
